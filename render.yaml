@@ -1,0 +1,26 @@
+services:
+  # ── Backend: FastAPI Python Service ──────────────────────────────────────────
+  - type: web
+    name: legalease-backend
+    rootDir: backend
+    runtime: python
+    pythonVersion: "3.12"
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn api.index:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: GOOGLE_REDIRECT_URI
+        sync: false          # Set this in Render dashboard to: https://<your-render-app-url>/api/auth/google/callback
+      - key: FRONTEND_ORIGIN
+        value: https://ai-fronend-89.vercel.app
+      - key: BACKEND_BASE_URL
+        sync: false          # Set this in Render dashboard to: https://<your-render-app-url>
+      - key: OLLAMA_BASE_URL
+        value: http://localhost:11434
+      - key: OLLAMA_MODEL
+        value: llama3.2:latest
