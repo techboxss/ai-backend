@@ -17,7 +17,7 @@ services:
       - key: GOOGLE_REDIRECT_URI
         sync: false          # Set this in Render dashboard to: https://<your-render-app-url>/api/auth/google/callback
       - key: FRONTEND_ORIGIN
-        value: https://ai-fronend-89.vercel.app
+        value: https://kagallaw.legaleasesolutions.co.in
       - key: BACKEND_BASE_URL
         sync: false          # Set this in Render dashboard to: https://<your-render-app-url>
       - key: OLLAMA_BASE_URL

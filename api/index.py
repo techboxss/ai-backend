@@ -18,7 +18,7 @@ app = FastAPI(title="LegalEase FastAPI Backend", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://ai-fronend-89.vercel.app",],
+    allow_origins=["https://kagallaw.legaleasesolutions.co.in",],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

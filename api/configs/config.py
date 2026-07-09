@@ -6,12 +6,12 @@ load_dotenv()
 
 class Settings(BaseModel):
     port: int = int(os.getenv("PORT", "8000"))
-    frontend_origin: str = os.getenv("FRONTEND_ORIGIN", "https://ai-fronend-89.vercel.app")
-    backend_base_url: str = os.getenv("BACKEND_BASE_URL", "https://ai-backend-wc01.onrender.com")
+    frontend_origin: str = os.getenv("FRONTEND_ORIGIN", "https://kagallaw.legaleasesolutions.co.in")
+    backend_base_url: str = os.getenv("BACKEND_BASE_URL", "https://apikagallaw.legaleasesolutions.co.in")
     session_secret: str = os.getenv("SESSION_SECRET", "change-this-dev-secret")
     google_client_id: str = os.getenv("GOOGLE_CLIENT_ID", "")
     google_client_secret: str = os.getenv("GOOGLE_CLIENT_SECRET", "")
-    google_redirect_uri: str = os.getenv("GOOGLE_REDIRECT_URI", "https://ai-backend-wc01.onrender.com/api/auth/google/callback")
+    google_redirect_uri: str = os.getenv("GOOGLE_REDIRECT_URI", "https://apikagallaw.legaleasesolutions.co.in/api/auth/google/callback")
     ollama_base_url: str = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
     ollama_model: str = os.getenv("OLLAMA_MODEL", "llama3.2:latest")
 
