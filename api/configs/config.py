@@ -6,7 +6,7 @@ load_dotenv()
 
 class Settings(BaseModel):
     port: int = int(os.getenv("PORT", "8000"))
-    frontend_origin: str = os.getenv("FRONTEND_ORIGIN", "http://localhost:5173")
+    frontend_origin: str = os.getenv("FRONTEND_ORIGIN", "https://ai-fronend-89.vercel.app")
     backend_base_url: str = os.getenv("BACKEND_BASE_URL", "https://ai-backend-wc01.onrender.com")
     session_secret: str = os.getenv("SESSION_SECRET", "change-this-dev-secret")
     google_client_id: str = os.getenv("GOOGLE_CLIENT_ID", "")
