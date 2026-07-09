@@ -2,7 +2,7 @@ services:
   # ── Backend: FastAPI Python Service ──────────────────────────────────────────
   - type: web
     name: legalease-backend
-    rootDir: backend
+    rootDir: .
     runtime: python
     pythonVersion: "3.12"
     buildCommand: pip install -r requirements.txt
